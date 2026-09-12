@@ -1,0 +1,12 @@
+id: dexgrab
+name: DexGRAB
+asset_dir: ${oc.env:FLUXSTEER_DATA_ROOT,./data}/DexGRAB
+checkpoint: checkpoints/fluxsteer/fluxsteer_dexgrab.pth
+inference:
+  steps: 200
+  mc_samples: 400
+  # 历史 DexGRAB 日志未记录 temperature；此处为当前代码默认值。
+  temperature: 0.05
+  w_erf: 0.3
+  w_spf: 0.5
+  w_srf: 0.4

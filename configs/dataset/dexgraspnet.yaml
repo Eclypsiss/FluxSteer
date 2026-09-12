@@ -1,0 +1,11 @@
+id: dexgraspnet
+name: DexGraspNet
+asset_dir: ${oc.env:FLUXSTEER_DATA_ROOT,./data}/DexGraspNet
+checkpoint: checkpoints/fluxsteer/fluxsteer_dexgraspnet.pth
+inference:
+  steps: 100
+  mc_samples: 200
+  temperature: 0.05
+  w_erf: 0.4
+  w_spf: 0.4
+  w_srf: 0.4

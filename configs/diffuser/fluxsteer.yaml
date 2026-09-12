@@ -1,0 +1,6 @@
+name: FluxSteer
+steps: 1000
+loss_type: l1
+num_sampling_steps: 100
+num_sampling_steps_guided: 100
+use_stochastic_fm: false

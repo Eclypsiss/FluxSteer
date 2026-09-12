@@ -1,0 +1,24 @@
+# Generated data and local dependencies are not repository source.
+/data/
+/outputs/
+/downloads/
+/src/
+/assets/urdf/
+/envs/assets/
+/envs/tasks/base_task.py
+/checkpoints/fluxsteer/
+*.pth
+*.pt
+*.pkl
+*.zip
+*.tar.gz
+*.partial
+*.so
+*.o
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+.env
+.venv/

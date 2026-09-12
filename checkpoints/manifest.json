@@ -1,0 +1,12 @@
+{
+  "method": "FluxSteer",
+  "repository": "Eclypsiss/FluxSteer",
+  "release_tag": "checkpoints-v1",
+  "models": {
+    "dexgraspnet": {"filename": "fluxsteer_dexgraspnet.pth", "source_filename": "dexgraspnet_epoch0451.pth", "size_bytes": 128746757, "provenance": "verified_historical_main"},
+    "unidexgrasp": {"filename": "fluxsteer_unidexgrasp.pth", "source_filename": "unidexgrasp_epoch0110.pth", "size_bytes": 128746757, "provenance": "verified_historical_main"},
+    "dexgrab": {"filename": "fluxsteer_dexgrab.pth", "source_filename": "dexgrab_epoch1562.pth", "size_bytes": 128746757, "provenance": "compatible_historical_identity_unverified"},
+    "multidex": {"filename": "fluxsteer_multidex.pth", "source_filename": "multidex_epoch2999.pth", "size_bytes": 128746757, "provenance": "compatible_replacement_candidate"},
+    "realdex": {"filename": "fluxsteer_realdex.pth", "source_filename": "realdex_epoch2999.pth", "size_bytes": 128746757, "provenance": "compatible_replacement_candidate"}
+  }
+}

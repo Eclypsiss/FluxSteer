@@ -1,0 +1,47 @@
+# FluxSteer 公共配置；数据集与历史推理参数见 dataset/。
+defaults:
+  - _self_
+  - dataset: dexgraspnet
+  - diffuser: fluxsteer
+  - model: unet_grasp
+  - task: grasp
+  - optimizer: null
+
+hydra:
+  run:
+    dir: ${exp_dir}
+  job:
+    chdir: false
+  output_subdir: null
+  job_logging:
+    root:
+      handlers: [console]
+
+exp_dir: outputs/fluxsteer_default
+checkpoint: ${dataset.checkpoint}
+resume: null
+slurm: false
+gpu: 0
+seed: 0
+save_model_interval: 1
+checkpoint_keep_latest: 3
+checkpoint_milestone_interval: 100
+
+llm:
+  enabled: false
+use_dpmsolver: false
+
+sampling:
+  mode: fluxsteer
+  num_steps: ${dataset.inference.steps}
+  mc_samples: ${dataset.inference.mc_samples}
+  method: euler
+  guidance_strategy: local_sim_mc
+  temperature: ${dataset.inference.temperature}
+  guidance_scale: 30.0
+  w_erf: ${dataset.inference.w_erf}
+  w_spf: ${dataset.inference.w_spf}
+  w_srf: ${dataset.inference.w_srf}
+  use_baseline_potential: false
+  posthoc_learning_rate: 0.01
+  posthoc_iterations: 25

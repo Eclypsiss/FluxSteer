@@ -1,0 +1,11 @@
+id: realdex
+name: real_dex
+asset_dir: ${oc.env:FLUXSTEER_DATA_ROOT,./data}/Realdex
+checkpoint: checkpoints/fluxsteer/fluxsteer_realdex.pth
+inference:
+  steps: 75
+  mc_samples: 400
+  temperature: 0.05
+  w_erf: 0.95
+  w_spf: 0.3
+  w_srf: 0.4

@@ -1,0 +1,54 @@
+name: grasp_gen_ur
+lr: 0.0001
+use_scheduler: false
+warmup_epochs: 200
+peak_lr: 0.0005
+min_lr: 0.00001
+
+train:
+  batch_size: 128
+  num_workers: 0
+  num_epochs: 3000
+  log_step: 100
+test:
+  epoch: null
+  batch_size: 32
+  num_workers: 0
+
+dataset:
+  name: ${dataset.name}
+  desc: ${dataset.name} ShadowHand
+  asset_dir: ${dataset.asset_dir}
+  asset_dir_slurm: ${dataset.asset_dir}
+  use_llm: ${llm.enabled}
+  normalize_x: true
+  normalize_x_trans: true
+  modeling_keys: [allDoFs]
+  num_points: 2048
+  frame_interval_train: 5
+  frame_interval_test: 10
+  device: cuda
+  use_color: false
+  use_normal: false
+  is_downsample: true
+  train_transforms: [NumpyToTensor]
+  test_transforms: [NumpyToTensor]
+  transform_cfg: {}
+
+visualizer:
+  name: GraspGenURVisualizer
+  ksample: ${task.test.batch_size}
+  guidance_scale: 1.5
+  vis_denoising: false
+  visualize: false
+  visualize_html: false
+  interval: 1
+  use_llm: ${llm.enabled}
+  datasetname: ${task.dataset.name}
+  asset_dir: ${task.dataset.asset_dir}
+  object_name: null
+  object_list_file: null
+  record_inference_times: true
+  runtime_warmup: false
+  experiment_method: FluxSteer
+  experiment_config_id: ${dataset.id}

@@ -1,0 +1,39 @@
+# Linux x86_64 / Python 3.8. Install PyTorch first (README.md).
+# NumPy <1.24 supports the unmodified Isaac Gym Preview 4 Python helpers.
+numpy==1.23.5
+scipy==1.10.1
+PyYAML==6.0.2
+einops==0.4.1
+hydra-core==1.2.0
+omegaconf==2.2.2
+loguru==0.6.0
+tqdm==4.62.3
+trimesh==3.12.7
+plyfile==1.0.3
+networkx==2.8.6
+Pillow==9.0.1
+imageio==2.35.1
+transforms3d==0.4.1
+pyquaternion==0.9.9
+urdf-parser-py==0.0.4
+pytorch-kinematics==0.7.5
+arm-pytorch-utilities==0.4.3
+pytorch-seed==0.2.0
+lxml==5.3.0
+smplx==0.1.28
+matplotlib==3.5.1
+plotly==5.11.0
+tabulate==0.8.10
+termcolor==2.4.0
+requests==2.32.4
+tensorboard==2.14.0
+protobuf==3.20.3
+fvcore==0.1.5.post20221221
+iopath==0.1.10
+ninja==1.11.1.1
+packaging==24.2
+ipdb==0.13.13
+
+# PyTorch3D, CSDF and Isaac Gym are installed separately; see README.md.
+# PointNet is the released backbone. Optional LLM/PointNet2/PointTransformer
+# branches are not required for the five supplied checkpoints.

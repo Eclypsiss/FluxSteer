@@ -1,0 +1,11 @@
+id: multidex
+name: MultiDexShadowHandUR
+asset_dir: ${oc.env:FLUXSTEER_DATA_ROOT,./data}/MultiDex/MultiDex_UR
+checkpoint: checkpoints/fluxsteer/fluxsteer_multidex.pth
+inference:
+  steps: 75
+  mc_samples: 400
+  temperature: 0.05
+  w_erf: 0.6
+  w_spf: 0.11
+  w_srf: 0.4
