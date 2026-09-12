@@ -227,7 +227,7 @@ Dataset-specific inference presets:
 | `unidexgrasp` | 75 | 200 | .4 / .4 / .4 |
 | `dexgrab` | 200 | 400 | .3 / .5 / .4 |
 | `multidex` | 75 | 400 | .4 / .4 / .4 |
-| `realdex` | 75 | 400 | .95 / .3 / .4 |
+| `realdex` | 75 | 400 | 1.0 / .3 / .4 |
 
 Defaults: 32 candidates/object, `local_sim_mc`, guided Euler, guidance scale 30, temperature .05, sampling seed 0, and evaluation seed 42. Proposal standard deviation is .1 in normalized model-state coordinates. Guided sampling uses two flow-network forwards per step; vanilla Euler uses one. MC energy evaluations add further computation. Evaluation requires a positive multiple of 8 candidates/object. Sampling and evaluation each use one physical GPU; multiple `--gpus` values are training-only.
 
