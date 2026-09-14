@@ -255,6 +255,15 @@ The retained MAIN physics protocol uses six sequential force directions, 50 simu
 
 Inspect `objects`, `objects_evaluated`, `objects_skipped`, and `skipped_objects` together with success counts/totals. Missing assets and failed objects are recorded rather than silently included as successful evaluations. UniDexGrasp historically generated 2,268 objects but evaluated 2,224 because 44 lacked usable assets under this protocol; use the actual denominator of each new run.
 
+## Evaluation records
+
+Five-benchmark evaluation records, generated grasps,
+and verification tools are available in the
+[results release](https://github.com/Eclypsiss/FluxSteer/releases/tag/results-v1).
+
+See the archive README for reporting conventions, recorded configurations,
+and limitations. The archive covers the historical main comparison only.
+
 ## Troubleshooting
 
 - **Missing `libpython3.8.so.1.0`:** activate the Conda environment, then try `export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}"` before importing Isaac Gym.
